@@ -1,13 +1,19 @@
-// Pagination.scss
-
 .pagination {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 20px;
+    width: 100%; /* Чтобы занимали всю ширину родительского элемента */
+  }
   
-    button {
-      margin: 0 5px;
-      padding: 5px 10px;
-    }
+  .pagination-button {
+    height: 40px; 
+    padding: 10px;
+    margin: 0 10px;
+  }
+  
+  .pagination span {
+    flex-grow: 1; /* Чтобы span центрировался между кнопками */
+    text-align: center; /* Центрирует текст в span */
   }
   

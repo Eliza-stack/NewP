@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Button, Form, Card } from "react-bootstrap";
-import './PostForm.scss'; // Можно добавить стили в отдельный файл
+import "./PostForm.scss";
 
 const PostForm = ({ onAdd }) => {
   const { register, handleSubmit, reset } = useForm();
@@ -18,7 +18,7 @@ const PostForm = ({ onAdd }) => {
         <Form onSubmit={handleSubmit(onSubmit)} className="post-form">
           <Form.Group controlId="formTitle">
             <Form.Control
-              {...register("title", { required: true })}
+              {...register("title", { required: "Заголовок обязателен" })}
               placeholder="Заголовок"
               className="form-input"
             />
@@ -26,7 +26,7 @@ const PostForm = ({ onAdd }) => {
           <Form.Group controlId="formBody">
             <Form.Control
               as="textarea"
-              {...register("body", { required: true })}
+              {...register("body", { required: "Текст поста обязателен" })}
               placeholder="Текст поста"
               className="form-textarea"
             />
