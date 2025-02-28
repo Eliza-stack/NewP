@@ -1,0 +1,69 @@
+// App.scss
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-family: 'Arial', sans-serif;
+
+.container {
+  font-family: $font-family;
+  padding: 20px;
+}
+
+h1 {
+  color: $primary-color;
+  text-align: center;
+}
+
+button {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.post {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: $primary-color;
+  }
+
+  p {
+    color: $secondary-color;
+  }
+
+  button {
+    background-color: #dc3545;
+    &:hover {
+      background-color: darken(#dc3545, 10%);
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  button {
+    margin: 0 5px;
+    padding: 5px 10px;
+  }
+
+  .active {
+    background-color: $primary-color;
+    color: white;
+    cursor: not-allowed;
+  }
+}
